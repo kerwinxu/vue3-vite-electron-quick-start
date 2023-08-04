@@ -66,8 +66,7 @@ npm run electron:dev
   "author": "github@lathesky",
   "main": "electron/electron.js", 
   ```
-  且删除 ```"type": "module",``` 这一行。
-7. 修改vite.config.js
+1. 修改vite.config.js
 ```
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
