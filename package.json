@@ -1,0 +1,51 @@
+{
+  "name": "vue3-vite-electron-quick-start",
+  "private": true,
+  "version": "0.0.0",
+  
+  "author": "github@lathesky",
+  "main": "electron/electron.js", 
+  "scripts": {
+    "dev": "vite --host",
+      "build": "vite build",
+      "serve": "vite preview",
+      "electron": "wait-on tcp:5173 && cross-env IS_DEV=true electron .",
+      "electron:dev": "concurrently -k \"cross-env BROWSER=none npm run dev\" \"npm run electron\"",
+      "electron:build.win": "npm run build && electron-builder --win --dir",
+      "electron:build.linux": "npm run build && electron-builder --linux appImage",
+      "electron:build.test": "npm run build && electron-builder --dir",
+      "electron:build.exe": "npm run build && electron-builder --win"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "concurrently": "^8.2.0",
+    "cross-env": "^7.0.3",
+    "electron": "^25.4.0",
+    "electron-builder": "^24.6.3",
+    "vite": "^4.4.5",
+    "wait-on": "^7.0.1"
+  },
+  "build": {
+    "appId": "com.my-website.my-app",
+    "productName": "MyApp",
+    "copyright": "Copyright © 2019 ${author}",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist_electron"
+    }
+  }
+}
