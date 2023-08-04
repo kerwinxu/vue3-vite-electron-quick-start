@@ -2,9 +2,9 @@
   "name": "vue3-vite-electron-quick-start",
   "private": true,
   "version": "0.0.0",
-  
+  "type": "module",
   "author": "github@lathesky",
-  "main": "electron/electron.js", 
+  "main": "electron/electron.cjs", 
   "scripts": {
     "dev": "vite --host",
       "build": "vite build",

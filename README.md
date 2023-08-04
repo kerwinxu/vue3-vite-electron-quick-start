@@ -79,9 +79,9 @@ export default defineConfig({
 })
 ```
 8. 在项目的顶级目录中建立"electron"文件夹
-9. 在这个文件夹建立这个文件 electron/electron.js
+9. 在这个文件夹建立这个文件 electron/electron.cjs
 ```
-// electron/electron.js
+// electron/electron.cjs
 const path = require('path');
 const { app, BrowserWindow } = require('electron');
 
@@ -132,9 +132,9 @@ app.on('window-all-closed', () => {
   }
 });
 ```
-10. 建立这一个文件 electron/preload.js
+10. 建立这一个文件 electron/preload.cjs
 ```
-// electron/preload.js
+// electron/preload.cjs
 
 // All of the Node.js APIs are available in the preload process.
 // It has the same sandbox as a Chrome extension.
