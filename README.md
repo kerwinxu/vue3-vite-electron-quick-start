@@ -2,7 +2,21 @@
 
 方便用vue3构造桌面应用程序的
 
-# 步骤
+# 使用步骤
+
+```
+# Clone this repository
+git clone https://github.com/kerwinxu/vue3-vite-electron-quick-start.git
+# Go into the repository
+cd vue3-vite-electron-quick-start
+# Install dependencies
+npm install
+# show app
+npm run electron:dev
+
+```
+
+# 制造步骤
 
 1. ```npm create vit```
    - project name 项目名称
